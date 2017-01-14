@@ -3,5 +3,5 @@
 // 使用rem进行移动端布局，按照iphone6的设计图750px标准
 
 @function rem($px){
-	@return 1rem * ($px/37.5);
+	@return 1rem * ($px/75);
 }

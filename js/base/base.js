@@ -5,7 +5,7 @@ define(function () {
     !(function () {
         var newRem = function() {
             var html = document.documentElement;
-            const gridNum = 20;
+            const gridNum = 10;
             html.style.fontSize = html.getBoundingClientRect().width / gridNum + 'px';
         };
         window.addEventListener('resize', newRem, false);
