@@ -7,18 +7,19 @@
 // 移除了槽宽
 
 $size:xs sm md lg;
-//$break-point: (768px 750px) (992px 900px) (1200px 900px);
+$break-point: (768px 750px) (992px 900px) (1200px 1170px) !default;
 
-$break-point:(600px 600px)(920px 600px)(1220px 900px) !default;
+//$break-point:(600px 600px)(920px 600px)(1220px 900px) !default;
 $col-num: 12 !default;
-$gutter: $basemargin !default;
+$gutter: 15px !default;
+
 
 .container-fluid {
 	width: 100%;
 }
 
 .row {
-	overflow: hidden;
+	@include clearfix;
 }
 // 媒体查询
 
@@ -30,6 +31,7 @@ $gutter: $basemargin !default;
 	@for $j from 1 through length($size) {
 		.col-#{nth($size,$j)}-#{$i}{
 			@extend %col;
+			padding: $gutter;
 		}
 	}
 }

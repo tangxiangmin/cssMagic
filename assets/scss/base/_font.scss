@@ -43,7 +43,7 @@ $size:xs sm md lg;
 }
 // 文本溢出
 // 单行
-.text-overflow-1 {
+@mixin text-overflow{
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;

@@ -90,3 +90,10 @@
 	@include fx-main(space-between);
 	@include fx-cross(center);
 }
+
+@mixin fx-jusify-v {
+	@include fx-dir;
+	@include fx;
+	@include fx-main(space-around);
+	@include fx-cross(center);
+}

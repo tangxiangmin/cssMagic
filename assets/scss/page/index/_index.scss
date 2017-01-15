@@ -1,63 +1,49 @@
 @charset "utf-8";
 
-$labcolor: $purple;
-$blogcolor: $yellow;
-$bookcolor: $green;
-$aboutcolor: $blue;
+
+/**
+	首页导航
+ */
 
 
-.main-nav {
 
+$indexcolor: ($labcolor $blogcolor $bookcolor $infocolor);
+
+.index {
+	.page-hd {
+		margin-top: rem(40);
+		margin-bottom: rem(40);
+		text-align: center;
+	}
+	.page-nav {
+
+	}
 }
 
+
+
 .nav-item {
-	float: left;
+	padding: rem(10);
+	&:hover {
+		@each $color in $indexcolor{
+			&:nth-of-type(#{index($indexcolor,$color)}){
+				color: $color;
+			}
+		}
+	}
+
 	.nav-link {
-		float: left;
-		width: rem(375);
-		height: rem(375);
-		@include fx-justify;
-		@include fx-dir;
-		padding: rem(35);
+		padding: 20px;
+
+		@extend %hover-scale;
+		@extend %hover-underline;
+
+		@include fx-jusify-v;
 
 		.iconfont {
-			display: block;
-			margin: 0 auto;
-			font-size: rem(140);
+			line-height: 1.2em;
+			font-size: 60px;
 		}
 	}
 }
 
-//.index {
-//	margin-top: 0.5rem;
-//	text-align: center;
-//	.nav-item {
-//		height: 1.5rem;
-//		padding: 0.1rem;
-//		&:hover {
-//			&:nth-of-type(1) {
-//				color: $labcolor;
-//			}
-//			&:nth-of-type(2) {
-//				color: $blogcolor;
-//			}
-//			&:nth-of-type(3) {
-//				color: $bookcolor;
-//			}
-//			&:nth-of-type(4) {
-//				color: $aboutcolor;
-//			}
-//		}
-//	}
-//	.item-inner {
-//		display: block;
-//		height: 100%;
-//		@extend %hover-scale;
-//		@extend %hover-underline;
-//		.iconfont {
-//			display: block;
-//			margin: 0 auto;
-//			font-size: 0.6rem;
-//		}
-//	}
-//}
