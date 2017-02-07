@@ -1,41 +1,26 @@
 @charset "utf-8";
 
+// 列表样式
+
+.list {
+	list-style: none;
+}
+
 @mixin list-unstyle {
 	margin: 0;
 	padding: 0;
 	list-style: none;
 }
-.list {
-	list-style: none;
 
-}
 .list-unstyle {
 	@include list-unstyle;
 }
-.list,.list-unstyle {
-	.list-icon {
-		float: right;
-		margin-left: 20px;
-		font-size: 0.8em;
-		color: $text-gray;
+
+// 常规模式下的宽度
+@for $i from 1 through 12 {
+	.col-#{$i}{
+		float: left;
+		width: percentage($i/12);
 	}
 }
-.list-border {
-	.list-item {
-		position: relative;
-		line-height: 40px;
-		@include border-tb;
-		@include transition;
-		background: #fff;
 
-		&:not(:first-child) {
-			margin-top: -1px;
-		}
-		&:hover {
-			border-color: $green;
-			z-index: 999;
-			//@include transform(scale(1,1.1));
-		}
-	}
-
-}

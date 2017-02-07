@@ -2,6 +2,12 @@
 
 // 使用rem进行移动端布局，按照iphone6的设计图750px标准
 
+// 由于暂时没有想到SCSS中如何去除单位，目前只能采用这种折中的办法进行处理
 @function rem($px){
-	@return 1rem * ($px/75);
+    @if (unitless($px)){
+        @return 1rem * ($px/75);
+    }@else {
+        @return 1rem * ($px/75px);
+    }
+
 }
