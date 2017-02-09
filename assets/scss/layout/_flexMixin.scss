@@ -97,9 +97,9 @@
 	@include fx-cross(center);
 }
 
-@mixin fx-jusify-v {
-	@include fx-dir;
+// vertical-align: middle
+
+.fx-vm {
 	@include fx;
-	@include fx-main(space-around);
 	@include fx-cross(center);
 }

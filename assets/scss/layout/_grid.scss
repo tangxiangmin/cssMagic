@@ -14,6 +14,7 @@ $gutter: 15px !default;
     margin-left: auto;
     margin-right: auto;
     padding:$gutter;
+    @include clearfix;
 }
 
 .container-fluid {

@@ -4,8 +4,13 @@
  */
 
 // 去除浏览器外边距
-body {
+body, p {
     margin: 0;
+}
+@for $i from 1 through 6 {
+    h#{$i} {
+        margin: 0;
+    }
 }
 
 // HTML新增标签元素在IE9一下正确显示

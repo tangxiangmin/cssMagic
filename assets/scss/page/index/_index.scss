@@ -1,1 +1,19 @@
 @charset "utf-8";
+
+.head{
+    &_left {}
+    &_main {}
+    &_right {}
+}
+.menu {
+    &_item {}
+}
+.search {
+    &_input {}
+    &_submit {}
+}
+.auth {
+    &_group{}
+    &_input {}
+    &_submit {}
+}
