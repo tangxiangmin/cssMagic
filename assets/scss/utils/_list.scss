@@ -2,18 +2,10 @@
 
 // 列表样式
 
-.list {
-	list-style: none;
-}
-
 @mixin list-unstyle {
-	margin: 0;
-	padding: 0;
+	margin-left: 0;
+	padding-left: 0;
 	list-style: none;
-}
-
-.list-unstyle {
-	@include list-unstyle;
 }
 
 // 常规模式下的宽度

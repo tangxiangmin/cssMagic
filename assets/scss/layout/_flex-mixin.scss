@@ -84,7 +84,6 @@
 }
 
 // -------快捷键-------
-
 @mixin fx-center {
 	@include fx;
 	@include fx-main(center);
@@ -97,9 +96,9 @@
 	@include fx-cross(center);
 }
 
-// vertical-align: middle
+// 定义相关的颗粒类，慎重使用颗粒类
 
-.fx-vm {
-	@include fx;
-	@include fx-cross(center);
+@if($is-flex){
+
 }
+

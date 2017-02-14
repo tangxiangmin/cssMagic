@@ -3,12 +3,6 @@
 	页面样式
  */
 
+@import 'page/public/_index';
 
-@import 'page/public/_mixin';
-@import 'page/public/_extend';
-
-@import 'page/public/_single';
-@import 'page/public/_common';
-
-
-@import 'page/index/_index';
+@import 'page/home/_index';

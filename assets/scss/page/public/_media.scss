@@ -1,0 +1,41 @@
+@charset "utf-8";
+
+// 面向对象CSS中的媒体对象
+
+.media {
+    @include fx;
+    // 侧栏
+    &_left {
+        margin-right: rem(35);
+        @include fx-shrink(0);
+    }
+    &_img {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    // 主体
+    &_bd {
+        @include fx-grow(1);
+        @include fx;
+        @include fx-dir(column);
+        @include fx-main(space-between);
+    }
+    &_ct {
+        font-size: 60%;
+        color: $text-gray;
+    }
+    &_hd {
+    }
+    &_ft {
+    }
+
+}
+
+// 根据左侧宽度定义的修饰符
+@mixin media-w($w) {
+    .media_left {
+        width: rem($w);
+    }
+}

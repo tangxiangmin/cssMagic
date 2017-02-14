@@ -1,10 +1,4 @@
 @charset "UTF-8";
-/*
-  配置文件
-*/
-/*
-  基础样式
-*/
 /**
  * 基础文件
  */
@@ -218,31 +212,6 @@ body {
   display: block;
   margin: 0 auto;
   max-width: 100%; }
-
-/*
-  布局样式
-*/
-.square {
-  display: block;
-  position: relative;
-  width: 100%;
-  padding-top: 100%; }
-
-.square-box {
-  display: block;
-  position: relative;
-  width: 100%; }
-  .square-box:after {
-    content: '';
-    display: block;
-    padding-top: 100%; }
-
-.square-inner {
-  position: absolute !important;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%; }
 
 /*--------------grid-------------*/
 .container {
@@ -652,124 +621,9 @@ body {
   .show-lg {
     display: block; } }
 /*--------------end grid-------------*/
-.fx-vm {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center; }
-
-/*
-  动画样式
-*/
-/**
-	相关动画
- */
-/*
-  组件样式
-*/
 /**
 	相关组件样式
  */
-.list {
-  list-style: none; }
-
-.list-unstyle {
-  margin: 0;
-  padding: 0;
-  list-style: none; }
-
-.col-1 {
-  float: left;
-  width: 8.33333%; }
-
-.col-2 {
-  float: left;
-  width: 16.66667%; }
-
-.col-3 {
-  float: left;
-  width: 25%; }
-
-.col-4 {
-  float: left;
-  width: 33.33333%; }
-
-.col-5 {
-  float: left;
-  width: 41.66667%; }
-
-.col-6 {
-  float: left;
-  width: 50%; }
-
-.col-7 {
-  float: left;
-  width: 58.33333%; }
-
-.col-8 {
-  float: left;
-  width: 66.66667%; }
-
-.col-9 {
-  float: left;
-  width: 75%; }
-
-.col-10 {
-  float: left;
-  width: 83.33333%; }
-
-.col-11 {
-  float: left;
-  width: 91.66667%; }
-
-.col-12 {
-  float: left;
-  width: 100%; }
-
-.tab .tab-nav {
-  height: 40px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  border-bottom: 1px solid #d6d6d6; }
-.tab .tab-wrap {
-  margin-top: 20px; }
-.tab .tab-item {
-  float: left;
-  width: 120px;
-  line-height: 40px;
-  height: 40px;
-  margin-left: 20px;
-  margin-bottom: -1px;
-  color: #999;
-  text-align: center;
-  border: 1px solid #d6d6d6;
-  border-radius: 5px 5px 0 0;
-  border-bottom: none;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
-  background: #fff;
-  background: -moz-linear-gradient(top, #eee, #fff);
-  background: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#fff));
-  cursor: pointer; }
-  .tab .tab-item .iconfont {
-    font-size: 0; }
-  .tab .tab-item.active {
-    color: #6699FF;
-    background: #fff;
-    background: -webkit-gradient(linear, left top, left bottom, from(#e1e1e1), to(#fff));
-    background: -moz-linear-gradient(top, #e1e1e1, #fff); }
-    .tab .tab-item.active .iconfont {
-      font-size: 1em; }
-.tab .tab-sec {
-  display: none;
-  width: 100%; }
-  .tab .tab-sec.active[flex] {
-    display: flex; }
-  .tab .tab-sec.active {
-    display: block; }
-
 /*--------------- 表单 --------------*/
 .form-horizontal .form-group {
   display: -webkit-box;
@@ -792,35 +646,7 @@ body {
   .form-inline .form-group {
     margin-right: 20px; }
 
-.input-group {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch; }
-  .input-group > :first-child {
-    border-radius: 4px 0 0 4px; }
-  .input-group > :last-child {
-    border-radius: 0 4px 4px 0; }
-  .input-group .input {
-    padding: 0 10px;
-    margin: 0 -1px;
-    position: relative;
-    z-index: 1;
-    border: 1px solid #d6d6d6;
-    -webkit-box-flex: 1;
-    -ms-flex-positive: 1;
-    flex-grow: 1; }
-    .input-group .input:focus {
-      border-color: #6699FF;
-      -ms-box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.075), 0 0 8px rgba(102, 153, 255, 0.6);
-      -o-box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.075), 0 0 8px rgba(102, 153, 255, 0.6);
-      box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.075), 0 0 8px rgba(102, 153, 255, 0.6); }
-  .input-group .input-icon {
-    border: 1px solid #d6d6d6; }
-
-.checkbox, .radio {
+.checkbox, .radio, .radio-square {
   display: inline-block;
   font-size: 0;
   position: relative;
@@ -829,7 +655,7 @@ body {
   height: 20px;
   vertical-align: middle; }
 
-.checkbox input[type=checkbox], .radio input[type=radio] {
+.checkbox input[type=checkbox], .radio input[type=radio], .radio-square input[type=radio] {
   width: 100%;
   height: 100%;
   display: block;
@@ -837,7 +663,7 @@ body {
   opacity: 0;
   filter: alpha(opacity=0); }
 
-.checkbox i, .radio i {
+.checkbox i, .radio i, .radio-square i {
   position: absolute;
   z-index: -1;
   left: 0;
@@ -854,14 +680,22 @@ body {
   -ms-flex-align: center;
   align-items: center;
   font-size: 0;
-  border: 1px solid #6699FF; }
+  border: 1px solid #d6d6d6; }
 
-.checkbox [type=checkbox]:checked + i, .radio [type=radio]:checked + i {
-  font-size: 14px;
+.checkbox [type=checkbox]:checked + i, .radio [type=radio]:checked + i, .radio-square [type=radio]:checked + i {
+  font-size: 0.85rem;
   color: #6699FF; }
+
+.checkbox [type=checkbox]:checked + i {
+  border-color: #6699FF; }
 
 .radio i {
   border-radius: 50%; }
+.radio [type=radio]:checked + i {
+  border-color: #6699FF; }
+
+.radio-square [type=radio]:checked + i {
+  border-color: #6699FF; }
 
 /**
     btn
@@ -920,21 +754,41 @@ body {
   border-width: 1px;
   line-height: calc(100% - 2); }
 
-/*
-  页面样式
-*/
 /**
 	页面样式
  */
-.back {
-  display: block;
-  padding-left: 5px; }
-  .back .iconfont {
-    float: left;
-    -webkit-transition: all ease 0.3s;
-    transition: all ease 0.3s; }
-  .back:hover .iconfont {
-    -webkit-transform: translateX(-5px);
-    transform: translateX(-5px); }
+.media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .media_left {
+    margin-right: 0.04667rem;
+    -ms-flex-negative: 0;
+    flex-shrink: 0; }
+  .media_img {
+    display: block;
+    width: 100%;
+    height: 100%; }
+  .media_bd {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: space-between;
+    -ms-flex-pack: space-between;
+    justify-content: space-between; }
+  .media_ct {
+    font-size: 60%;
+    color: #999; }
+
+/**
+	相关动画
+ */
 
 /*# sourceMappingURL=main.css.map */
