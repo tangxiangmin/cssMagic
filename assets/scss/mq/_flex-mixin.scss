@@ -7,7 +7,6 @@
 	display: flex;
 }
 @mixin fx-inline{
-	display: -webkit-inline-box;
 	display: -ms-inline-flexbox;
 	display: inline-flex;
 }
@@ -95,10 +94,3 @@
 	@include fx-main(space-between);
 	@include fx-cross(center);
 }
-
-// 定义相关的颗粒类，慎重使用颗粒类
-
-@if($is-flex){
-
-}
-

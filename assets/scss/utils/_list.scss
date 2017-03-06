@@ -2,13 +2,9 @@
 
 // 列表样式
 
-@mixin list-unstyle {
-	margin-left: 0;
-	padding-left: 0;
-	list-style: none;
-}
 
 // 常规模式下的宽度
+// 可以用来生成水平列表布局，比如导航，选项卡等
 @for $i from 1 through 12 {
 	.col-#{$i}{
 		float: left;

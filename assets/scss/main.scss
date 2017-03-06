@@ -1,49 +1,29 @@
 @charset "utf-8";
 
-//----------------------------配置------------------------------//
-// 主要用于配置相关的布局系统及基础变量
-
-// rem布局
-$is-mobile: false;
-$remwidth: 750;
-
-// 网格系统
-$is-grid:true;
-$gutter: 0;
-$colNum: 12;
-$breakPoint: (768px 750px) (992px 900px) (1200px 1170px) ;
-
-// 伸缩盒布局
-$is-flex: true;
-
-// 基础变量
-$basemargin: 20px;
-$basepadding: 20px;
-$baseborder: 1px solid #d6d6d6;
-
-
-// 颜色
-$yellow: #FF9900;
-$green: #33CC66;
-$blue: #3366FF;
-$purple: #9900FF;
-
-$basecolor: #6699FF ;
-
 //----------------------------引入------------------------------//
-
+@import "config";
 
 // 基础样式
-@import "_base";
+@import "base/_css3";
+@import "base/_reset";
+@import "base/_color";
+@import "base/_font";
+@import "base/_particle";
 
 // 布局样式
-@import "_layout";
+@import "mq/_grid";
+@import "mq/_flex-mixin";
+@import "mq/_rem";
 
 // 组件样式
-@import "_utils";
-
-// 页面样式
-@import "_page";
+@import "utils/form/_form";
+@import "utils/form/_choice";
+@import "utils/_btn";
+@import "utils/_tab";
 
 // 动画样式
-@import "_animate";
+@import "animate/public";
+
+// 页面样式
+@import 'page/public/_index';
+@import 'page/home/_index';

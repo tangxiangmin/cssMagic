@@ -1,17 +1,16 @@
 @charset "utf-8";
 
+
+
 .tab {
-	.tab-nav {
+	&_nav {
 		height: 40px;
 		@include list-unstyle;
 		@include border-b;
+		@include clearfix;
 	}
-	.tab-wrap {
-		margin-top: $basemargin;
-	}
-	.tab-item {
+	&_item {
 		float: left;
-		width: 120px;
 		line-height: 40px;
 		height: 40px;
 		margin-left: 20px;
@@ -30,9 +29,6 @@
 		background:-webkit-gradient(linear, left top, left bottom, from(#eee), to(#fff));
 
 		cursor:pointer;
-		.iconfont {
-			font-size: 0;
-		}
 
 		&.active {
 			color: $basecolor;
@@ -43,16 +39,30 @@
 				font-size: 1em;
 			}
 		}
-
 	}
-	.tab-sec {
+	&_wrap {
+		margin-top: $basemargin;
+	}
+	&_sec {
 		display: none;
 		width: 100%;
-		&.active[flex] {
-			display: flex;
-		}
+		height: 400px;
 		&.active {
 			display:  block;
 		}
 	}
+}
+
+
+ //选项卡数量
+@mixin tab-num($num: 2){
+	.tab-#{$num} {
+		.tab_item {
+			width: percentage($num/12);
+		}
+	}
+}
+
+@for $i from 2 through 4 {
+	@include tab-num($i)
 }

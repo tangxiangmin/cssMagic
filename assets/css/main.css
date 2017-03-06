@@ -1,8 +1,5 @@
 @charset "UTF-8";
 /**
- * 基础文件
- */
-/**
  * ---reset---
  */
 body, p {
@@ -91,55 +88,6 @@ textarea {
 .text-yellow {
   color: #FF9900; }
 
-.bg-green {
-  background-color: #33CC66;
-  color: #fff; }
-
-.text-green {
-  color: #33CC66; }
-
-.bg-cyan {
-  background-color: #6699FF;
-  color: #fff; }
-
-.text-cyan {
-  color: #6699FF; }
-
-.bg-blue {
-  background-color: #3366FF;
-  color: #fff; }
-
-.text-blue {
-  color: #3366FF; }
-
-.bg-purple {
-  background-color: #9900FF;
-  color: #fff; }
-
-.text-purple {
-  color: #9900FF; }
-
-.bg-dark {
-  background-color: #333;
-  color: #fff; }
-
-.text-dark {
-  color: #333; }
-
-.bg-white {
-  background-color: #fff;
-  color: #000; }
-
-.text-white {
-  color: #fff; }
-
-.bg-gray {
-  background-color: #f5f5f5;
-  color: #000; }
-
-.text-gray {
-  color: #f5f5f5; }
-
 .bg-base {
   background-color: #6699FF;
   color: #fff; }
@@ -158,8 +106,7 @@ html {
   -webkit-text-size-adjust: 100%; }
 
 body {
-  font: 16px/1.5 "Microsoft Yahei", Arial;
-  color: #000; }
+  font: 16px/1.5 "Microsoft Yahei", Arial; }
 
 .iconfont {
   font-size: inherit; }
@@ -621,9 +568,37 @@ body {
   .show-lg {
     display: block; } }
 /*--------------end grid-------------*/
-/**
-	相关组件样式
- */
+html {
+  font-size: 16px; }
+
+@media screen and (min-width: 375px) {
+  html {
+    /* iPhone6的375px尺寸作为16px基准，414px正好18px大小, 600 20px */
+    font-size: -webkit-calc(100% + 2 * (100vw - 375px) / 39);
+    font-size: calc(100% + 2 * (100vw - 375px) / 39);
+    font-size: -webkit-calc(16px + 2 * (100vw - 375px) / 39);
+    font-size: calc(16px + 2 * (100vw - 375px) / 39); } }
+@media screen and (min-width: 414px) {
+  html {
+    /* 414px-1000px每100像素宽字体增加1px(18px-22px) */
+    font-size: -webkit-calc(112.5% + 4 * (100vw - 414px) / 586);
+    font-size: calc(112.5% + 4 * (100vw - 414px) / 586);
+    font-size: -webkit-calc(18px + 4 * (100vw - 414px) / 586);
+    font-size: calc(18px + 4 * (100vw - 414px) / 586); } }
+@media screen and (min-width: 600px) {
+  html {
+    /* 600px-1000px每100像素宽字体增加1px(20px-24px) */
+    font-size: -webkit-calc(125% + 4 * (100vw - 600px) / 400);
+    font-size: calc(125% + 4 * (100vw - 600px) / 400);
+    font-size: -webkit-calc(20px + 4 * (100vw - 600px) / 400);
+    font-size: calc(20px + 4 * (100vw - 600px) / 400); } }
+@media screen and (min-width: 1000px) {
+  html {
+    /* 1000px往后是每100像素0.5px增加 */
+    font-size: -webkit-calc(137.5% + 6 * (100vw - 1000px) / 1000);
+    font-size: calc(137.5% + 6 * (100vw - 1000px) / 1000);
+    font-size: -webkit-calc(22px + 6 * (100vw - 1000px) / 1000);
+    font-size: calc(22px + 6 * (100vw - 1000px) / 1000); } }
 /*--------------- 表单 --------------*/
 .form-horizontal .form-group {
   display: -webkit-box;
@@ -754,9 +729,58 @@ body {
   border-width: 1px;
   line-height: calc(100% - 2); }
 
-/**
-	页面样式
- */
+.tab_nav {
+  height: 40px;
+  margin-left: 0;
+  padding-left: 0;
+  list-style: none;
+  border-bottom: 1px solid #d6d6d6;
+  zoom: 1; }
+  .tab_nav:after {
+    content: "";
+    display: block;
+    clear: both; }
+.tab_item {
+  float: left;
+  line-height: 40px;
+  height: 40px;
+  margin-left: 20px;
+  margin-bottom: -1px;
+  color: #999;
+  text-align: center;
+  border: 1px solid #d6d6d6;
+  border-radius: 5px 5px 0 0;
+  border-bottom: none;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  background: #fff;
+  background: -moz-linear-gradient(top, #eee, #fff);
+  background: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#fff));
+  cursor: pointer; }
+  .tab_item.active {
+    color: #6699FF;
+    background: #fff;
+    background: -webkit-gradient(linear, left top, left bottom, from(#e1e1e1), to(#fff));
+    background: -moz-linear-gradient(top, #e1e1e1, #fff); }
+    .tab_item.active .iconfont {
+      font-size: 1em; }
+.tab_wrap {
+  margin-top: 20px; }
+.tab_sec {
+  display: none;
+  width: 100%;
+  height: 400px; }
+  .tab_sec.active {
+    display: block; }
+
+.tab-2 .tab_item {
+  width: 16.66667%; }
+
+.tab-3 .tab_item {
+  width: 25%; }
+
+.tab-4 .tab_item {
+  width: 33.33333%; }
+
 .media {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -786,9 +810,5 @@ body {
   .media_ct {
     font-size: 60%;
     color: #999; }
-
-/**
-	相关动画
- */
 
 /*# sourceMappingURL=main.css.map */

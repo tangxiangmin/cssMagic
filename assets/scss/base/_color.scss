@@ -29,7 +29,7 @@ $colorArr:(red $red #fff)
 	(dark $dark #fff)
 	(white $white #000)
 	(gray $gray #000)
-	(base $basecolor #fff);
+	(base $basecolor #fff) !default;
 
 // 颗粒类
 @each $color in $colorArr{

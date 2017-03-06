@@ -21,9 +21,11 @@
 		clear:both;
 	}
 }
+
 .clearfix {
 	@include clearfix;
 }
+
 .block {
     display: block;
     width: 100%;
@@ -58,6 +60,7 @@ $baseborder: 1px solid #d6d6d6 !default;
 @mixin border-t($b:$baseborder) {
 	border-top: $b;
 }
+
 // 定义上下对称边框
 @mixin border-tb($b: $baseborder) {
 	border-top: $b;
@@ -76,6 +79,12 @@ $baseborder: 1px solid #d6d6d6 !default;
     filter: alpha(opacity=$opacity-ie);
 }
 
+// 列表
+@mixin list-unstyle {
+	margin-left: 0;
+	padding-left: 0;
+	list-style: none;
+}
 
 
 
