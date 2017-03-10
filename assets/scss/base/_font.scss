@@ -42,22 +42,7 @@ $fontsize:xs sm md lg;
 		font-size: index($fontsize,$s)*0.6*16px;
 	}
 }
-// 文本溢出
-// 单行
-@mixin text-overflow{
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-}
 
- // 多行
-@mixin text-overflow-line($i:2) {
-	overflow: hidden;
-	text-overflow: ellipsis;
-	display: -webkit-box;
-	-webkit-box-orient: vertical;
-	-webkit-line-clamp:$i;
-}
 
 
  

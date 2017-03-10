@@ -3,8 +3,9 @@
 //----------------------------引入------------------------------//
 @import "config";
 
+@import "mixin";
+
 // 基础样式
-@import "base/_css3";
 @import "base/_reset";
 @import "base/_color";
 @import "base/_font";
@@ -12,7 +13,6 @@
 
 // 布局样式
 @import "mq/_grid";
-@import "mq/_flex-mixin";
 @import "mq/_rem";
 
 // 组件样式
