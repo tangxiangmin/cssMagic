@@ -1,10 +1,8 @@
 @charset "utf-8";
-/**
-	flex布局
-	参考https://github.com/lzxb/flex.css.git声明式布局语法
-	已修改部分源码，并加入了网格系统
-	更新：这种做法与行内样式无异
- */
+	//flex布局
+	//参考https://github.com/lzxb/flex.css.git声明式布局语法
+	//已修改部分源码，并加入了网格系统
+	//更新：这种做法与行内样式无异
 
 
 	/**
@@ -12,6 +10,8 @@
  */
 
 [flex] {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 
 	// 默认wrap允许响应式布局
@@ -24,7 +24,10 @@
 $dirArr:column row column-reverse row-reverse ;
 @each $dir in $dirArr{
 	[flex~='dir:#{$dir}']{
-		flex-direction: $dir;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: $dir;
+		        flex-direction: $dir;
 	}
 }
 
@@ -32,7 +35,8 @@ $dirArr:column row column-reverse row-reverse ;
 $wrapArr:wrap nowrap wrap-reverse;
 @each $wrap in $wrapArr {
 	[flex~='wrap:#{$wrap}'] {
-		flex-wrap: $wrap;
+		-ms-flex-wrap: $wrap;
+		    flex-wrap: $wrap;
 	}
 }
 
@@ -40,7 +44,9 @@ $wrapArr:wrap nowrap wrap-reverse;
 $mainArr:(start flex-start) (center center) (end flex-end) (between space-between) (around space-around);
 @each $main in $mainArr {
 	[flex~='main:#{nth($main,1)}'] {
-		justify-content: nth($main,2);
+		-webkit-box-pack: nth($main,2);
+		    -ms-flex-pack: nth($main,2);
+		        justify-content: nth($main,2);
 	}
 }
 
@@ -48,7 +54,9 @@ $mainArr:(start flex-start) (center center) (end flex-end) (between space-betwee
 $crossArr:(start flex-start) (center center) (end flex-end) (baseline baseline) (stretch stretch);
 @each $cross in $crossArr {
 	[flex~='cross:#{nth($cross,1)}'] {
-		align-items: nth($cross,2);
+		-webkit-box-align: nth($cross,2);
+		    -ms-flex-align: nth($cross,2);
+		        align-items: nth($cross,2);
 	}
 }
 
@@ -64,51 +72,57 @@ $crossArr:(start flex-start) (center center) (end flex-end) (baseline baseline) 
 // 子项独立对齐方式
 @each $cross in $crossArr {
 	[item~='align:#{nth($cross,1)}']{
+		-ms-flex-item-align: nth($cross,2);
+		-ms-grid-row-align: nth($cross,2);
 		align-self: nth($cross,2);
 	}
 }
 
+
 @for $i from 1 through 5 {
 	// 排列顺序
 	[item~='order:#{$i}']{
-		order: $i;
+		-webkit-box-ordinal-group: $i;
+		    -ms-flex-order: $i;
+		        order: $i;
 	}
 
 	// 放大比例
 	[item~='grow:#{$i}']{
-		flex-grow: $i;
+		-webkit-box-flex: $i;
+		    -ms-flex-positive: $i;
+		        flex-grow: $i;
 	}
 
 	// 缩小比例
 	[item~='shrink:#{$i}']{
-		flex-shrink: $i;
+		-ms-flex-negative: $i;
+		    flex-shrink: $i;
 	}
 }
-
-// 响应式网格
-$flexBreakPoint: (768px 750px) (992px 970px) (1200px 1170px);
-$flexColNum: 12;
-$flexSize:xs sm md lg;
-
-@for $i from 1 through $flexColNum {
-	[item~='xs:#{$i}']{
-		flex-basis: percentage($i/12);
-	}
-	%container {
-		width: 100%;
-	}
-}
-
-@for $i from 1 through length($flexBreakPoint) {
-	@media screen and (min-width: nth(nth($flexBreakPoint,$i),1)) {
-
-		@for $j from 1 through $flexColNum {
-			[item~='#{nth($flexSize,$i+1)}:#{$j}']{
-				flex-basis: percentage($j/12);
-			}
-		}
-		%container {
-			width: nth(nth($flexBreakPoint,$i),2) ;
-		}
-	}
-}
+//$flexBreakPoint: (768px 750px) (992px 970px) (1200px 1170px);
+//$flexColNum: 12;
+//$flexSize:xs sm md lg;
+//
+//@for $i from 1 through $flexColNum {
+//	[item~='xs:#{$i}']{
+//		flex-basis: percentage($i/12);
+//	}
+//	%container {
+//		width: 100%;
+//	}
+//}
+//
+//@for $i from 1 through length($flexBreakPoint) {
+//	@media screen and (min-width: nth(nth($flexBreakPoint,$i),1)) {
+//
+//		@for $j from 1 through $flexColNum {
+//			[item~='#{nth($flexSize,$i+1)}:#{$j}']{
+//				flex-basis: percentage($j/12);
+//			}
+//		}
+//		%container {
+//			width: nth(nth($flexBreakPoint,$i),2) ;
+//		}
+//	}
+//}
