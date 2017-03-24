@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+// 多栏布局实现瀑布流
+
+.waterfall {
+    padding: 2vw;
+    width: 100vw;
+    background-color: #f2fafa;
+
+    // 2列
+    @include col-count(2);
+    @include col-width(47vw);
+    @include col-gap(2vw);
+
+    &_item {
+        @include col-break(inside, avoid);
+    }
+}
+

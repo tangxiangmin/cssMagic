@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>分栏布局瀑布流</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <!--<link rel="stylesheet" href="../assets/css/main.css">-->
+    <script src="../js/holder.js"></script>
+    <style>
+        .waterfall {
+            padding: 2vw;
+            width: 100vw;
+            background-color: #f2fafa;
+            -webkit-column-count: 2;
+            -moz-column-count: 2;
+            column-count: 2;
+            -webkit-column-width: 47vw;
+            -moz-column-width: 47vw;
+            column-width: 47vw;
+            -webkit-column-gap: 2vw;
+            -moz-column-gap: 2vw;
+            column-gap: 2vw; }
+        .waterfall_item {
+            -webkit-column-break-inside: avoid; }
+
+        .media {
+            margin-bottom: 2vw;
+            background-color: #fff; }
+        .media_img {
+            display: block;
+            width: 100%; }
+        .media_bd {
+            padding: 10px; }
+        .media_tt {
+            font-size: 14px; }
+        .media_ct {
+            font-size: 13px;
+            margin: 5px 0;
+            color: #6a6a6a;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2; }
+        .media_ft {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: space-between;
+            -ms-flex-pack: space-between;
+            justify-content: space-between;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            font-size: 12px; }
+        .media_avatar {
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            vertical-align: middle; }
+        .media_like {
+            color: #6a6a6a; }
+        .media_hd img {
+            width: 100% !important;
+        }
+
+    </style>
+</head>
+<body>
+<div class="waterfall">
+    <div class="waterfall_item">
+        <div class="media">
+            <div class="media_hd">
+                <img src="holder.js/200x300" class="media_img"/>
+            </div>
+            <div class="media_bd">
+                <div class="media_tt">随便来点什么标题吧~</div>
+                <div class="media_ct">
+                    随便来点什么内容吧哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+                </div>
+                <div class="media_ft">
+                    <div>
+                        <img src="holder.js/26x26" class="media_avatar" /> 小明
+                    </div>
+
+                    <div class="meida_like">
+                        322
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="waterfall_item ">
+        <div class="media">
+            <div class="media_hd">
+                <img src="holder.js/300x300" class="media_img"/>
+            </div>
+            <div class="media_bd">
+                <div class="media_tt">随便来点什么标题吧~</div>
+                <div class="media_ct">
+                    随便来点什么内容吧哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+                </div>
+                <div class="media_ft">
+                    <div>
+                        <img src="holder.js/26x26" class="media_avatar" /> 小明
+                    </div>
+
+                    <div class="media_like">
+                        322
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="waterfall_item">
+        <div class="media">
+            <div class="media_hd">
+                <img src="holder.js/200x180" class="media_img"/>
+            </div>
+            <div class="media_bd">
+                <div class="media_tt">随便来点什么标题吧~</div>
+                <div class="media_ct">
+                    随便来点什么内容吧哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+                </div>
+                <div class="media_ft">
+                    <div>
+                        <img src="holder.js/26x26" class="media_avatar" /> 小明
+                    </div>
+
+                    <div class="media_like">
+                        322
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="waterfall_item ">
+        <div class="media">
+            <div class="media_hd">
+                <img src="holder.js/140x180" class="media_img"/>
+            </div>
+            <div class="media_bd">
+                <div class="media_tt">随便来点什么标题吧~</div>
+                <div class="media_ct">
+                    随便来点什么内容吧哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+                </div>
+                <div class="media_ft">
+                    <div>
+                        <img src="holder.js/26x26" class="media_avatar" /> 小明
+                    </div>
+
+                    <div class="media_like">
+                        322
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -36,3 +36,6 @@ HTML标签是整个页面的骨骼，样式依赖于具体的结构，而写出�
 * [选项卡](doc/技巧/选项卡.md)
 
 
+## 备注
+* 图片占位使用了[`holder.js`](https://github.com/imsky/holder)插件
+
