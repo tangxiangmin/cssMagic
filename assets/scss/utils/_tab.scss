@@ -1,68 +1,77 @@
 @charset "utf-8";
 
-
-
+// 选项卡
 .tab {
-	&_nav {
-		height: 40px;
-		@include list-unstyle;
-		@include border-b;
-		@include clearfix;
-	}
-	&_item {
-		float: left;
-		line-height: 40px;
-		height: 40px;
-		margin-left: 20px;
-		margin-bottom: -1px;
-
-		color: $text-gray;
+	.tab_nav {
+		margin: 0;
+		height: rem(110);
+		line-height: rem(110);
 		text-align: center;
-
-		@include border;
-		border-radius: 5px 5px 0 0 ;
-		border-bottom: none;
-
-		box-shadow:inset 0 1px 0 rgba(255, 255, 255, 0.5);
-		background:#fff;
-		background:-moz-linear-gradient(top, #eee, #fff);
-		background:-webkit-gradient(linear, left top, left bottom, from(#eee), to(#fff));
-
-		cursor:pointer;
-
-		&.active {
-			color: $basecolor;
-			background:#fff;
-			background:-webkit-gradient(linear, left top, left bottom, from(#e1e1e1), to(#fff));
-			background:-moz-linear-gradient(top, #e1e1e1, #fff);
-			.iconfont {
-				font-size: 1em;
-			}
-		}
+		background: #fff;
+		list-style: none;
 	}
-	&_wrap {
-		margin-top: $basemargin;
-	}
-	&_sec {
-		display: none;
-		width: 100%;
-		height: 400px;
-		&.active {
-			display:  block;
-		}
+}
+
+.tab_sec {
+	display: none;
+	&.active {
+		display: block;
 	}
 }
 
 
- //选项卡数量
-@mixin tab-num($num: 2){
-	.tab-#{$num} {
-		.tab_item {
-			width: percentage($num/12);
+// 激活颜色带底边框
+@mixin tab_item-border {
+	position: relative;
+	&.active {
+		&:after {
+			content: '';
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			height: 3px;
+			background-color: $basecolor;
 		}
 	}
 }
 
-@for $i from 2 through 4 {
-	@include tab-num($i)
+.tab-border {
+	.tab_nav {
+		@include border-b;
+		@include border-t;
+	}
+	.tab_item {
+		@include tab_item-border;
+	}
+}
+
+// 竖直方向上的选项卡
+.tab-v {
+	@include fx;
+	@include fx-main(between);
+	.tab_nav {
+		width: rem(150);
+		text-align: center;
+		@include border-r;
+
+	}
+	.tab_item {
+		&.active {
+			background-color: #fff;
+		}
+	}
+	.tab_box {
+		@include fx-grow(1);
+		background-color: #fff;
+	}
+	.tab_sec {
+	}
+}
+
+.empty {
+	min-height: 70vh;
+	width: 100%;
+	color: #999;
+	@include fx-center;
 }

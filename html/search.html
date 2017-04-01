@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>搜索</title>
+    <link rel="stylesheet" href="../assets/fonts/iconfont.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <style>
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <div class="search_wrap">
+            <div class="search">
+                <div class="search_hd">
+                    <div class="search_bar">
+                        <div class="search_icon">
+                            <i class="iconfont icon-search "></i>
+                        </div>
+                        <input type="text" class="search_input">
+                    </div>
+                    <div class="search_cancle">取消</div>
+                </div>
+                <div class="search_mask"></div>
+                <div class="search_bd">
+                    <ul class="search_res">
+                        <li class="search_item">
+                            iPhone 7
+                            <span class="fr">价格 <span class="text-yellow">￥600</span></span>
+                        </li>
+                        <li class="search_item">
+                            iPhone 6
+                            <span class="fr">价格 <span class="text-yellow">￥400</span></span>
+                        </li>
+                        <li class="search_item">
+                            iPhone 5
+                            <span class="fr">价格 <span class="text-yellow">￥100</span></span>
+                        </li>
+                
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/require.js"></script>
+    <script>
+        require(['../js/config'],function () {
+            require(['jquery', 'base'],function ($) {
+                $(".search").t_search({
+                    url: "##",
+                    data: {},
+                    success: function (res) {
+                        console.log(1);
+                    }
+                }, true);
+            })
+        })
+    </script>
+</body>
+</html>

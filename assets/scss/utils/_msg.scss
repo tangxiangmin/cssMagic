@@ -1,0 +1,17 @@
+@charset "utf-8";
+
+.msg {
+    padding: rem(100) rem(50);
+    text-align: center;
+
+    &_icon {
+        font-size: rem(200);
+    }
+    &_tt {
+        line-height: 3em;
+    }
+    &_ct {
+        font-size: 12px;
+        color: $text-gray;
+    }
+}

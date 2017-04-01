@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+// 移动端顶部导航
+.top {
+	text-align: center;
+	line-height: rem(100);
+	background-color: #fff;
+	@include clearfix;
+
+	.top_l, .top_r {
+		width: rem(100);
+	}
+	.top_l {
+		float: left;
+	}
+	.top_r {
+		float: right;
+	}
+	.top_tt {
+		padding:0 rem(100);
+	}
+}

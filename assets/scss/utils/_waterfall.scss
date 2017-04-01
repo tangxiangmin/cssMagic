@@ -1,11 +1,10 @@
 @charset "utf-8";
 
 // 多栏布局实现瀑布流
+// todo: 定义一组混合器和颗粒类
 
 .waterfall {
-    padding: 2vw;
-    width: 100vw;
-    background-color: #f2fafa;
+    width: 100%;
 
     // 2列
     @include col-count(2);

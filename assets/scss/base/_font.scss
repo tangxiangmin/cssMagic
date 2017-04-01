@@ -36,11 +36,11 @@ $wordPos:left center right ;
 }
 
 // 字体大小
-$fontsize:xs sm md lg;
-@each $s in $fontsize {
-	.text-#{$s} {
-		font-size: index($fontsize,$s)*0.6*16px;
-	}
+.text-xs {
+	font-size: 12px;
+}
+.text-sm {
+	font-size: 14px;
 }
 
 
