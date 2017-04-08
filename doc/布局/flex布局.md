@@ -38,3 +38,13 @@
 // 省略...
 
 ```
+
+## 2017-4-8
+之前定义混合器的方式有些问题，不同浏览器前缀的属性名，其属性值是不一样的，这导致出现了一些不合法的属性
+```
+justify-content: space-between;
+-webkit-box-pack: justify;
+```
+
+这样统一传值`space-between`就会出现问题。
+还是老老实实用autoPerfix工具来解决这些问题吧。

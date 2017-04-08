@@ -1,5 +1,5 @@
 {
-  "name": "shymean",
+  "name": "cssmagic",
   "version": "1.0.0",
   "description": "just for fun",
   "main": "index.html",
@@ -7,9 +7,12 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "txm",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "gulp": "^3.9.1",
-    "gulp-livereload": "^3.8.1"
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-livereload": "^3.8.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.5.1"
   }
 }
