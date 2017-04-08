@@ -12,3 +12,73 @@
 	}
 }
 
+// 待边框的列表
+.list-border {
+	line-height: rem(90);
+
+	@include list-unstyle;
+
+	.list_item {
+		padding-left: $basepadding;
+
+		@include border-b;
+		&:first-of-type {
+			@include border-t;
+		}
+	}
+}
+
+// 行内列表
+.list-inline {
+	@include list-unstyle;
+	@include clearfix;
+}
+
+// 用于展示信息的列表
+.list-info {
+	@include list-unstyle;
+	line-height: 2em;
+	color: $text-gray;
+	.list_item {
+		@include clearfix;
+	}
+	.list_tt {
+		float: left;
+		width: 6em;
+
+	}
+	.list_ct {
+		overflow: hidden;
+	}
+}
+
+// 增强版的有序列表
+.list-order {
+	@include list-unstyle;
+	line-height: 2em;
+	.list_item {
+		padding-left: $basepadding;
+		&:before {
+			$s: 20px;
+			content: attr(data-index);
+			display: inline-block;
+			vertical-align: middle;
+
+			width: $s;
+			height: $s;
+			line-height: $s;
+			margin-right: 5px;
+
+			color: $text-gray;
+			background-color: $gray;
+			text-align: center;
+			border-radius: 3px;
+		}
+		&:nth-of-type(-n+3) {
+			&:before {
+				background-color: $basecolor;
+				color: #fff;
+			}
+		}
+	}
+}

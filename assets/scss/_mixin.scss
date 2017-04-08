@@ -67,7 +67,7 @@ $baseborder: 1px solid #d6d6d6 !default;
 
 // 列表
 @mixin list-unstyle {
-	margin-left: 0;
-	padding-left: 0;
+	margin: 0;
+	padding: 0;
 	list-style: none;
 }

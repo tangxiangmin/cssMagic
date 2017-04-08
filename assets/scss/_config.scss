@@ -4,7 +4,7 @@
 // 主要用于配置相关的布局系统及基础变量
 
 // rem布局
-$remwidth: 750;
+$remwidth: 37.5;
 
 // 网格系统
 $gutter: 0;
@@ -35,11 +35,11 @@ $basecolor: $cyan;
 $colorArr:(red $red #fff)
         (oragne $oragne #fff)
         (yellow $yellow #fff)
-        //(green $green #fff)
-        //(cyan $cyan #fff)
-        //(blue $blue #fff)
-        //(purple $purple #fff)
-        //(dark $dark #fff)
-        //(white $white #000)
-        //(gray $gray #000)
+        (green $green #fff)
+        (cyan $cyan #fff)
+        (blue $blue #fff)
+        (purple $purple #fff)
+        (dark $dark #fff)
+        (white $white #000)
+        (gray $gray #000)
         (base $basecolor #fff);

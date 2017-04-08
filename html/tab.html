@@ -2,21 +2,56 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>选项卡</title>
-    <link rel="stylesheet" href="../assets/css/flex.css">
+    <link rel="stylesheet" href="../assets/fonts/iconfont.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <style>
+    </style>
 </head>
+
 <body>
-    <div class="tab tab-3">
-        <ul class="tab_nav">
-            <li class="tab_item active"><a href="#tab_sec-1">选项卡</a></li>
-            <li class="tab_item"><a href="#tab_sec-2">选项卡</a></li>
-            <li class="tab_item"><a href="#tab_sec-3">选项卡</a></li>
-        </ul>
-        <div class="tab_wrap">
-            <div class="tab_sec" id="tab_sec-1">1</div>
-            <div class="tab_sec" id="tab_sec-2">2</div>
-            <div class="tab_sec" id="tab_sec-3">3</div>
+    <div class="page">
+        <div class="tab tab-border">
+            <ul class="sec-hd tab_nav list-inline">
+                <li class="tab_item active col-3">
+                    待付款
+                </li>
+                <li class="tab_item col-3">
+                    待发货
+                </li>
+                <li class="tab_item col-3">
+                    待收货
+                </li>
+                <li class="tab_item col-3">
+                    待评价
+                </li>
+            </ul>
+            <div class="tab_box">
+                <div class="tab_sec active">
+                    <div class="empty">这里啥都没有...</div>
+                </div>
+                <div class="tab_sec active">
+                    <div class="empty">这里也啥都没有...</div>
+                </div>
+                <div class="tab_sec active">
+                    <div class="empty">这里还是啥都没有...</div>
+                </div>
+                <div class="tab_sec active">
+                    <div class="empty">别挣扎了，想放啥就放啥</div>
+                </div>
+            </div>
+           
         </div>
     </div>
+    <script src="../js/require.js"></script>
+    <script>
+        require(['../js/config.js'],function () {
+            require(['jquery', 'base'],function ($) {
+                $(".tab").t_tab();
+            })
+        })
+    </script>
 </body>
 </html>

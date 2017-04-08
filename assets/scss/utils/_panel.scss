@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+
+.panel {
+	background-color: #fff;
+	@include border-b;
+
+	&_hd {
+		@include border-tb;
+		padding-left: 10px;
+		padding-right: 10px;
+
+		font-size: 14px;
+		line-height: rem(90);
+		color: $text-gray;
+		background-color: $gray;
+	}
+	&_bd {
+
+	}
+
+}

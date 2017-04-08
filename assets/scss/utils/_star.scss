@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+.score {
+    &_item {
+        display: inline-block;
+        padding-left: 0;
+        padding-right: 0;
+        float: left;
+        height: 30px;
+        width: 30px;
+        margin: 0 1px;
+
+        // 背景图的高度是76px * 36px
+        $pos: -30/36 * 40px;
+
+        background-image: url("../img/icon/star.png");
+        background-repeat: no-repeat;
+        background-position: $pos  0;
+        background-size: cover;
+
+        cursor: pointer;
+        @include transition(all .2s ease);
+
+        &.active {
+            background-position: 0 0;
+        }
+    }
+
+
+}

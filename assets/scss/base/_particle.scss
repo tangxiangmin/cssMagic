@@ -28,6 +28,45 @@
 	max-width: 100%;
 }
 
+// 边距
+.mg-base {
+	margin: $basemargin;
+}
+.mt-base {
+	margin-top: $basemargin;
+}
+.mb-base {
+	margin-bottom: $basemargin;
+}
+// 边距负1px，主要是为了解决两个边框重合的问题
+.mt--1 {
+	margin-top: -1px !important;
+}
+.mb--1 {
+	margin-bottom: -1px !important;
+}
+
+.pd-base {
+	padding: $basepadding/2 $basepadding;
+}
+.ptb-base {
+	padding-top: $basepadding/2;
+	padding-bottom: $basepadding/2;
+}
+
+// flex
+// 用于左右两列布局，一列固定宽度另一列自适应
+.flex-between {
+	@include fx;
+	@include fx-main(between);
+}
+.flex_grow {
+	@include fx-grow(1);
+}
+// 完全居中
+.flex-center {
+	@include fx-center;
+}
 
 
 

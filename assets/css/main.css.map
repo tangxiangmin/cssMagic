@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAIA,UAAW;EACP,OAAO,EAAE,GAAG;EACZ,KAAK,EAAE,KAAK;EACZ,gBAAgB,EAAE,OAAO;ECIzB,oBAAoB,EDDD,CAAC;ECEjB,iBAAiB,EDFD,CAAC;ECGZ,YAAY,EDHD,CAAC;ECLpB,oBAAoB,EDMD,IAAI;ECLpB,iBAAiB,EDKD,IAAI;ECJf,YAAY,EDID,IAAI;ECMvB,kBAAkB,EDLD,GAAG;ECMjB,eAAe,EDND,GAAG;ECOZ,UAAU,EDPD,GAAG;EAEpB,eAAO;ICmCH,2BAA2B,EDlCA,KAAK",
-"sources": ["../scss/utils/_waterfall.scss","../scss/mq/_cloumn.scss"],
-"names": [],
-"file": "main.css"
-}

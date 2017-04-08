@@ -1,0 +1,56 @@
+@charset "utf-8";
+.coupon {
+    position: relative;
+    overflow: hidden;
+
+    margin: 25px 0;
+    padding: 0 10px;
+    font-size: rem(24);
+    color: $text-gray;
+    background-color: #fefefe;
+    @include box-shadow(3px 3px 3px #ccc);
+
+    .coupon_bd {
+        overflow: hidden;
+        border-bottom: 1px solid #dedede;
+        padding-top: $basepadding;
+        padding-bottom: 10px;
+        @include fx;
+    }
+    .coupon_price {
+        display: block;
+        font-size: rem(90);
+        color: $yellow;
+    }
+
+    .coupon_info {
+        @include fx-grow(1);
+        text-align: right;
+        line-height: 1.4em;
+    }
+    .coupon_ft {
+        line-height: 3em;
+    }
+    .coupon_tag {
+        position: absolute;
+        z-index: 9;
+        right: -3em;
+        bottom: 0;
+        width: 10em;
+        height: 3em;
+        line-height: 3em;
+
+        text-align: center;
+        @include transform(rotate(-45deg));
+    }
+}
+
+.coupon-expired {
+    .coupon_price {
+        color: $text-gray;
+    }
+    .coupon_tag {
+        background-color: $gray;
+        color: $text-gray;
+    }
+}
