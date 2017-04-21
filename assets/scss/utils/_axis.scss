@@ -1,0 +1,112 @@
+@charset "utf-8";
+
+//时间轴
+
+
+$axis-badge-size: 16px;
+$axix-active-color: $basecolor;
+%axis_item {
+    position: relative;
+
+    &.active {
+        .axis_badge {
+            border-color: $axix-active-color;
+            background-color: $axix-active-color;
+            color: #fff;
+        }
+    }
+
+    .axis_badge {
+        display: inline-block;
+        width: $axis-badge-size;
+        height: $axis-badge-size;
+        text-align: center;
+        line-height: 14px;
+        font-size: 10px;
+        background: #f8f8f8;
+        @include border-radius(8px);
+        @include border;
+    }
+
+}
+/**
+    竖直方向上的时间轴布局
+ */
+.axis {
+    @include list-unstyle;
+
+    &_item {
+        @extend %axis_item;
+
+        &.active {
+            .item-bd {
+                border-color: #8ed5fe;
+            }
+        }
+
+        &:last-of-type {
+            .item-bd {
+                border-color: transparent;
+            }
+        }
+
+        .item-hd {
+            margin: 0;
+            padding-left: 26px;
+            line-height: $axis-badge-size;
+            font-weight: normal;
+        }
+        .item-bd {
+            margin-top: -1px;
+            min-height: 60px;
+            margin-left: 7px;
+            padding-left: 18px;
+            padding-top: 5px;
+            border-left: 2px solid $gray;
+
+            margin-bottom: 0;
+        }
+    }
+    .axis_badge {
+        position: absolute;
+        left: 0;
+    }
+}
+
+
+/**
+    水平方向上的时间轴布局
+ */
+
+.axis-h {
+    overflow: hidden;
+    @include list-unstyle;
+    .axis_badge {
+        display: block;
+        margin: 0 auto;
+        position: relative;
+        z-index: 9;
+    }
+    .axis-item {
+        text-align: center;
+
+        &:first-child:before, &:last-child:after {
+            display: none;
+        }
+
+        &:before, &:after {
+            content: '';
+            position: absolute;
+            bottom: $axis-badge-size/2 - 1;
+            height: 2px ;
+            width: 50%;
+            background-color: #b2b2b2;
+        }
+        &:before {
+            left: 0;
+        }
+        &:after {
+            right: 0;
+        }
+    }
+}

@@ -17,11 +17,17 @@
 * [rem布局](doc/rem布局.md)
 * [grid布局](doc/grid布局.md)
 
+### 样式
+* [形变动画](doc/transform形变动画.md)
+* [初识SVG](doc/初识SVG.md)
+* [渐变颜色](doc/渐变颜色.md) 
+
+
 ### 组件
 * [正方形](html/square.html)
 * [选项卡](html/tab.html)
 * [表单](html/form.html)
-* [瀑布流](html/waterfull.html)
+* [瀑布流](html/waterfall.html)
 * [列表](html/list.html)
 * [打分](html/star.html)
 * [搜索](html/search.html)
