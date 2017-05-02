@@ -10,14 +10,15 @@ var SCSSFLODER = "./assets/scss/**/*.*",
     MAPSFLODER = './';
 
 // 任务
+// 这里需要先编译scss再使用autoperfixer
 gulp.task("sass", function(){
     return gulp.src(SCSSFLODER)
         .pipe(sourcemaps.init())
+        .pipe(sass().on('error', sass.logError))
         .pipe(autoprefixer({
             browsers: ['> 5%'],
             cascade: false
         }))
-        .pipe(sass().on('error', sass.logError))
         .pipe(sourcemaps.write(MAPSFLODER))
         .pipe(gulp.dest(CSSFLODER))
         .pipe(livereload());
