@@ -1,7 +1,5 @@
 @charset "utf-8";
-/**
- * ---定义了颗粒类---
- */
+/* ---particle--- */
 
 // 浮动
 .fl {
@@ -25,7 +23,13 @@
 .img-responsive {
 	display: block;
 	margin: 0 auto;
-	max-width: 100%;
+	width: 100%;
+}
+
+// 使用背景图解决图片变形问题
+.img-holder {
+	background-size: cover;
+	background-position: center;
 }
 
 // 边距
@@ -34,6 +38,9 @@
 }
 .mt-base {
 	margin-top: $basemargin;
+}
+.mt-base-10 {
+	margin-top: 10px;
 }
 .mb-base {
 	margin-bottom: $basemargin;
@@ -49,6 +56,7 @@
 .pd-base {
 	padding: $basepadding/2 $basepadding;
 }
+
 .ptb-base {
 	padding-top: $basepadding/2;
 	padding-bottom: $basepadding/2;
@@ -57,16 +65,25 @@
 // flex
 // 用于左右两列布局，一列固定宽度另一列自适应
 .flex-between {
-	@include fx;
-	@include fx-main(between);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 .flex_grow {
-	@include fx-grow(1);
+	flex-grow: 1;
 }
 // 完全居中
 .flex-center {
-	@include fx-center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
+
+.flex-column {
+	display: flex;
+	flex-direction: column;
+}
+/* ---particle end--- */
 
 
 

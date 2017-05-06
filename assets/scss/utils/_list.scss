@@ -2,7 +2,6 @@
 
 // 列表样式
 
-
 // 常规模式下的宽度
 // 可以用来生成水平列表布局，比如导航，选项卡等
 @for $i from 1 through 12 {
@@ -58,9 +57,10 @@
 	line-height: 2em;
 	.list_item {
 		padding-left: $basepadding;
+		counter-increment: item;
 		&:before {
 			$s: 20px;
-			content: attr(data-index);
+			content: counter(item);
 			display: inline-block;
 			vertical-align: middle;
 

@@ -1,4 +1,5 @@
 @charset "utf-8";
+// 由于使用了auto-prefixer，因此这个关于flex混合器的文件已经没有必要使用了 /斜眼
 
 // 定义flex相关的混合器，实际上只是简单处理了flex的属性值，统一添加前缀，页面中禁止出现单个的flex样式属性
 @mixin fx{

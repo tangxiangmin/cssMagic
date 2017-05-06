@@ -1,8 +1,6 @@
 @charset "utf-8";
 
- /**
-  * ---font---
-  */
+ /* ---font--- */
 
 
 //  字体
@@ -36,14 +34,14 @@ $wordPos:left center right ;
 }
 
 // 字体大小
-.text-xs {
-	font-size: 12px;
-}
-.text-sm {
-	font-size: 14px;
+$fontSize: (xxs 10px) (xs 12px) (sm 14px) (md 16px) (lg 24px);
+@each $font in $fontSize{
+	.text-#{nth($font, 1)} {
+		font-size: nth($font, 2);
+	}
 }
 
-
+/* ---font end--- */
 
  
 

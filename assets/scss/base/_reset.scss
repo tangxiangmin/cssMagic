@@ -1,7 +1,6 @@
 @charset "utf-8";
-/**
- * ---reset---
- */
+
+/* ---reset--- */
 
 // 去除浏览器外边距
 body,
@@ -40,7 +39,8 @@ input,button,textarea,select,optgroup {
     font-family: inherit;
     font-size: inherit;
     font-style: inherit;
-    background: inherit;
+    color: inherit;
+    background-color: inherit;
 }
 
 //移动端表单默认样式
@@ -61,9 +61,7 @@ textarea {
 
 // 选择盒子模型，好想使用"*"统配选择符
 * {
-    @include box-sizing;
+    box-sizing: border-box;
 }
 
-/**
- * ---end reset---
- */
+/* ---end reset--- */
