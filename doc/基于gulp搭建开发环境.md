@@ -1,6 +1,8 @@
 gulp
 ===
 
+> 2017-06-16：现在决定基于webpack搭建整个前端项目的开发环境，gulp可用于一些比较小型的场合使用
+
 ## 插件
 
 __gulp-sass__
@@ -18,8 +20,32 @@ __gulp-base64__
 __gulp-livereload__
 代码环境热更新，需要配合谷歌浏览器的插件`livereload`使用，主要是这个插件用习惯了。
 
-## 任务
+## 配置
+
+### package.json
+```json
+{
+  "name": "cssmagic",
+  "version": "1.0.0",
+  "description": "just for fun",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "txm",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-livereload": "^3.8.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.5.1"
+  }
+}
+
 ```
+### gulpfile.js
+```js
 var gulp = require("gulp");
 var sass = require("gulp-sass");
 var sourcemaps = require('gulp-sourcemaps');
