@@ -28,7 +28,7 @@ __gulp-livereload__
   "name": "cssmagic",
   "version": "1.0.0",
   "description": "just for fun",
-  "main": "index.html",
+  "main": demo,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

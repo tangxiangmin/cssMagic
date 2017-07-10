@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>表单</title>
+    <link rel="stylesheet" href="../src/fonts/iconfont.css">
+    <link rel="stylesheet" href="../src/css/main.css">
+    
+    <style>
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <div class="top">
+            <a href="javascript:window.history.back();" class="top_l"><i class="iconfont icon-left"></i></a>
+            <div class="top_tt">表单</div>
+        </div>
+        <div class="panel">
+            <div class="panel_hd">
+                无label的表单
+            </div>
+            <div class="panel_bd">
+                <form action="" class="form-list mt--1">
+                   
+                        <div class="form_group">
+                            <input type="text" class="form_input" placeholder="请输入姓名">
+                        </div>
+                        <div class="form_group">
+                            <input type="text" class="form_input" placeholder="请输入能联系到您的手机号">
+                        </div>
+                        <div class="form_group">
+                            <input type="text" class="form_input" placeholder="请选择所在地区">
+                        </div>
+                        <div class="form_group">
+                            <div class="col-6">
+                                <div class="radio">
+                                    <input type="radio" name="style">
+                                    <i class="iconfont icon-check"></i>
+                                </div>
+                                选项1
+                            </div>
+                            <div class="col-6">
+                                <div class="radio">
+                                    <input type="radio" name="style">
+                                    <i class="iconfont icon-check"></i>
+                                </div>
+                                选项2
+                            </div>
+                        </div>
+                        <div class="form_group">
+                            <select type="text" class="form_input">
+                                <option value="">请选择优惠码（选填）</option>
+                            </select>
+                            <i class="iconfont icon-right"></i>
+                        </div>
+                        <div class="form_group">
+                            <textarea name="" class="form_textarea" placeholder="还有什么要求吗？"></textarea>
+                        </div>
+                        <div class="form_group">
+                            <label for="isread" class="block">
+                                <span class="checkbox">
+                                    <input type="checkbox" checked id="isread">
+                                    <i class="iconfont icon-check"></i>
+                                </span>
+                                我已阅读并同意 <a class="text-base">《服务协议》</a>
+                            </label>
+                        </div>
+                    <div class="mg-base">
+                        <button type="submit" class="btn btn-round bg-base btn-block">确定</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

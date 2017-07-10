@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>评分</title>
+    <link rel="stylesheet" href="../src/fonts/iconfont.css">
+    <link rel="stylesheet" href="../src/css/main.css">
+    <style>
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <div class="top">
+            <a href="javascript:window.history.back();" class="top_l"><i class="iconfont icon-left"></i></a>
+            <div class="top_tt">评价</div>
+        </div>
+        <div class="panel">
+            <div class="panel_hd">
+                评分
+            </div>
+            <div class="panel_bd pd-base">
+                <ul class="list-info">
+                    <li class="list_item">
+                        <div class="list_tt">工作效率</div>
+                        <div class="list_ct">
+                            <div class="score">
+                                <input type="hidden" class="score_input">
+                                <i class="score_item active"></i>
+                                <i class="score_item"></i>
+                                <i class="score_item"></i>
+                                <i class="score_item"></i>
+                                <i class="score_item"></i>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list_item">
+                        <div class="list_tt">维修质量</div>
+                        <div class="list_ct">
+                            <div class="score">
+                                <input type="hidden" class="score_input">
+                                <i class="score_item active"></i>
+                                <i class="score_item active"></i>
+                                <i class="score_item active"></i>
+                                <i class="score_item"></i>
+                                <i class="score_item"></i>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list_item">
+                        <div class="list_tt">维修质量</div>
+                        <div class="list_ct">
+                            <div class="score">
+                                <input type="hidden" class="score_input">
+                                <i class="score_item"></i>
+                                <i class="score_item"></i>
+                                <i class="score_item"></i>
+                                <i class="score_item"></i>
+                                <i class="score_item"></i>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="../js/require.js"></script>
+    <script>
+        require(['../js/config'],function () {
+            require(['jquery', 'base'],function ($) {
+                $(".score").t_score();
+            })
+        })
+    </script>
+</body>
+</html>
