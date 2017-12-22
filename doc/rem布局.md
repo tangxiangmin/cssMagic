@@ -39,3 +39,19 @@ $remwidth: 75 !default;
 
 ## 2017-2-14
 今天看见了[张鑫旭大神的博文](http://www.zhangxinxu.com/wordpress/2016/08/vw-viewport-responsive-layout-typography/)关于使用`calc`和`vw`设置根字体的方法，试用一下感觉很爽，主要不是需要再使用`JS`进行判断了（不过可以作为`calc`的兼容备份）。此外这样设置还可以影响页面上的全部文本，整个页面甚至可以完全按比例缩放，简直太棒了。
+
+## 2017-12-22
+经过一段时间的尝试，发现了"完美"还原设计图尺寸的rem方式
+```scss
+html {
+    font-size: calc((100vw / 750) * 100);
+}
+
+@function rem($px){
+    @if (unitless($px)){
+        @return 1rem * ($px/100);
+    }@else {
+        @return 1rem * ($px/100px);
+    }
+}
+```
